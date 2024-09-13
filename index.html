@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Arjun.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/assets/styles.css">
+    <link rel="shortcut icon" href="./public/fabicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Nav Bar -->
+
+    <div id="nav_main_container">
+        <div id="nav_bar">
+            <div class="logo">
+                <a href="./index.html"><h1>It's Arjun<span>.</span></h1></a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./src/pages/about.html">About</a></li>
+                    <li><a href="./src/pages/projects.html">Projects</a></li>
+                    <li><a href="./src/pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <button class="contact" type="button"><p>Get In Touch</p>
+                <div class="div"><i class="fa-solid fa-arrow-right"></i></div>
+            </button>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./src/pages/about.html">About</a></li>
+                    <li><a href="./src/pages/projects.html">Projects</a></li>
+                    <li><a href="./src/pages/contact.html">Contact</a></li>
+                </ul>
+                <button class="menu_contact" type="button"><p>Get In Touch</p>
+                    <div class="div"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <div class="hero_section">
+        <div class="hero_section_inner">
+            <div class="hero_left">
+                <div class="hero_left_top">
+                    <div class="hero_description">
+                        <img src="./public/images/star.png" alt="">
+                        <h4>Full Stack Web Developer</h4>
+                    </div>
+                    <div class="caption">
+                        <h1>Let's <span>Create</span> Amazing stuff <span>together</span></h1>
+                    </div>
+                    <button class="contact" type="button"><p>Get In Touch</p>
+                        <div class="div"><i class="fa-solid fa-arrow-right"></i></div>
+                    </button>
+                </div>
+            </div>
+            <div class="image_wrapper">
+                <img class="image" src="./public/images/image_wrapper.png" alt="iamge">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
